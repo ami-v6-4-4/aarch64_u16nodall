@@ -2,10 +2,13 @@ language: node_js
 
 # Version number
 node_js:
-  - 6.14 #.2 
-  - 8.11 #.2 
-  - 9.11 #.1 
-  - 10.1 #.0
+  - 4.8       #.7
+  - 5.12      #.0
+  - 6.11      #.5
+  - 7.10.1
+  - 8.1       #.4
+  - 8.6       #.0 
+  - 9.11      #.1
 
 runtime:
   nodePool: custom__aarch64__Ubuntu_16_04
@@ -20,11 +23,3 @@ build:
     - node --version
     - docker ps
     - docker images
-    - docker pull shippabledocker/sample_node_pvt:ecr
-    
-integrations:
-    
-  hub:
- #Docker integration
-    - integrationName: ship-docker
-      type: dockerRegistryLogin
